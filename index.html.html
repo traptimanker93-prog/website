@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BuildSpace | Project Showcase</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">B</span> buildspace</a>
+    <nav>
+      <a href="#projects">Explore</a>
+      <a href="#share">Share a project</a>
+    </nav>
+    <a class="nav-cta" href="#share">Post a project <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> A COMMUNITY FOR BUILDERS</p>
+        <h1>Make it. Share it.<br><span>Make it better.</span></h1>
+        <p class="hero-text">A little corner of the internet to show what you're building, get thoughtful feedback, and find inspiration from other makers.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#projects">Explore projects <span>↓</span></a>
+          <a class="text-link" href="#share">I built something <span>↗</span></a>
+        </div>
+        <div class="community-note"><div class="mini-avatars"><span>R</span><span>A</span><span>M</span><span>+</span></div><p><strong>Good ideas grow here.</strong><br><small>Built by learners, for learners.</small></p></div>
+      </div>
+      <div class="hero-art">
+        <div class="art-card card-back"><span class="tiny-label">IN PROGRESS</span><div class="skeleton-line wide"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div><div class="art-dots">•••</div></div>
+        <div class="art-card card-front"><div class="art-top"><span class="window-dots">● ● ●</span><span class="code-tag">HTML / CSS / JS</span></div><div class="code-art"><span class="code-pink">&lt;idea&gt;</span><br>&nbsp;&nbsp;<span class="code-yellow">build</span><span>(</span><span class="code-green">"something cool"</span><span>)</span><br><span class="code-pink">&lt;/idea&gt;</span></div><div class="art-bottom"><span class="status-dot"></span> Turning ideas into reality</div></div>
+        <div class="floating-sticker">✳<small>KEEP<br>BUILDING</small></div>
+        <div class="floating-star">✦</div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div><strong id="project-count">06</strong><span>PROJECTS TO EXPLORE</span></div>
+      <div><strong>∞</strong><span>THINGS TO LEARN</span></div>
+      <div><strong>100%</strong><span>ROOM TO IMPROVE</span></div>
+      <p>Small steps. Real progress. <span>✳</span></p>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COMMUNITY BOARD</p><h2>Fresh from the <span>workshop.</span></h2><p class="section-subtitle">Discover projects, leave a little encouragement, or share an idea of your own.</p></div>
+        <a class="text-link desktop-link" href="#share">Have a project? <span>↗</span></a>
+      </div>
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input type="search" id="search-input" placeholder="Search projects, ideas, tags..."></label>
+        <div class="filter-buttons" id="filter-buttons">
+          <button class="filter active" data-tag="All">All projects</button>
+          <button class="filter" data-tag="Web">Web</button>
+          <button class="filter" data-tag="AI">AI</button>
+          <button class="filter" data-tag="Mobile">Mobile</button>
+          <button class="filter" data-tag="Design">Design</button>
+        </div>
+      </div>
+      <div class="project-grid" id="project-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>No projects found. Try another search or tag.</p>
+    </section>
+
+    <section class="share-section" id="share">
+      <div class="share-intro"><p class="eyebrow">YOUR TURN</p><h2>Made something<br><span>you’re proud of?</span></h2><p>It doesn't have to be perfect. Share what you've learned and let the community help you take the next step.</p><div class="share-note"><span>✳</span> Every expert was once a beginner.</div></div>
+      <form id="project-form" class="project-form">
+        <div class="form-heading"><span class="form-icon">＋</span><div><h3>Submit a project</h3><p>Tell us a little about what you made.</p></div></div>
+        <label for="title">Project title <span>*</span></label><input id="title" name="title" maxlength="60" placeholder="e.g. My first portfolio website" required>
+        <label for="description">A short description <span>*</span></label><textarea id="description" name="description" maxlength="240" rows="3" placeholder="What does it do? What did you learn?" required></textarea>
+        <label for="tags">Tech tags <span>*</span></label><select id="tags" name="tags" required><option value="">Choose a category</option><option>Web</option><option>AI</option><option>Mobile</option><option>Design</option></select>
+        <div class="form-row"><div class="field-half"><label for="demo">Live demo link</label><input id="demo" type="url" placeholder="https://..."></div><div class="field-half"><label for="github">GitHub link</label><input id="github" type="url" placeholder="https://github.com/..."></div></div>
+        <button class="button button-dark submit-button" type="submit">Add my project <span>↗</span></button>
+        <p class="form-message" id="form-message" aria-live="polite"></p>
+        <p class="form-footnote">Your projects are saved in this browser for this demo.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#"><span class="brand-mark">B</span> buildspace</a><p>Made with curiosity, and a little bit of code. <span>✳</span></p><a href="#top">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
